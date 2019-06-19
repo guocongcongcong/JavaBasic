@@ -58,6 +58,9 @@ JSP 是 Servlet 技术的扩展，本质上就是 Servlet 的简易方式。JSP 
 
 ## 3. 说一下 jsp 的 4 种作用域？
 
+[link](https://blog.csdn.net/qq_36871364/article/details/70153502)
+
+
 ## 4. session 和 cookie 有什么区别？
 
 ## 5. 说一下 session 的工作原理？
