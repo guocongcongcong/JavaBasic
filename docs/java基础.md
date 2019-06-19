@@ -68,7 +68,8 @@
 
 ## 7. java 中操作字符串都有哪些类？它们之间有什么区别？
 
-- [链接](https://blog.csdn.net/qq_35246620/article/details/56024465)
+[链接](https://blog.csdn.net/qq_35246620/article/details/56024465)
+
 - 对于操作效率而言,一般来说,StringBuilder > StringBuffer > String；
 - 对于线程安全而言,StringBuffer 是线程安全的,可用于多线程；而 StringBuilder 是非线程安全的,用于单线程；
 - 对于频繁的字符串操作而言,无论是 StringBuffer 还是 StringBuilder,都优于 String.
@@ -78,13 +79,13 @@
 
 ## 8. String str="i"与 String str=new String(“i”)一样吗？
 
-> [答案链接](https://www.cnblogs.com/bluestorm/p/3296897.html)
+[链接](https://www.cnblogs.com/bluestorm/p/3296897.html)
 
 - String str = "a"; 这个只是一个引用,内存中如果有“a"的话,str 就指向它；如果没有,才创建它;
 
 - 如果你以后还用到"a"这个字符串的话并且是这样:String str1 = "a"; String str2 = "a"; String str2 = "a"; 这 4 个变量都共享一个字符串"a".而 String str = new String("a");是根据"a"这个 String 对象再次构造一个 String 对象,将新构造出来的 String 对象的引用赋给 str.
 
-  > [链接](https://www.cnblogs.com/aspirant/p/9193112.html)
+[链接](https://www.cnblogs.com/aspirant/p/9193112.html)
 
 ## 9. 如何将字符串反转？
 
@@ -92,7 +93,7 @@
 
 ## 10. String 类的常用方法都有那些？
 
-- > [链接](https://www.cnblogs.com/ABook/p/5527341.html)
+[链接](https://www.cnblogs.com/ABook/p/5527341.html)
 
 - public int length()
 
@@ -118,16 +119,16 @@
   // 求长度
   // public int length();
   String str = new String("asdfgz");
-  int strlength = str.length();        //strlength = 7
+  int strlength = str.length();//strlength = 7
   // 求某个字符串的某一位字符
   // public char charAt(int index);
   String str = new String("asdfz");
-  char ch = str.charAt(4);             //ch=z
+  char ch = str.charAt(4); //ch=z
   // 提取子串
   // 1)public String substring(int beginIndex)
   // 2)public String substring(int beginIndex,int endIndex);
   String str1 = new String("asdfgxz");
-  Stirng str2 = str1.substring(2);     // str2 = "dfzxc"
+  Stirng str2 = str1.substring(2); // str2 = "dfzxc"
   String str3 = str1.substring(2,5);   // str3 = "dfz"
   // 字符串比较
   // 1)public int compareTo(String anotherString);//该方法是对字符串内容按字典顺序进行大小比较,通过返回的整数值指明当前字符串与参数字符串的大小关系.若当前对象比参数大则返回正整数,反之返回负整数,相等返回0.
@@ -173,62 +174,62 @@
 
 ## 11. 抽象类必须要有抽象方法吗？
 
-    - 其实这个问题非常明白,用 abstract 修饰的类就是抽象类,并不是说抽象类中必须有抽象方法,即使一个类中的方法全部实现过,也可以用 abstract 修饰为抽象类,所以抽象类不一定都有抽象方法.
-    - 延伸：因为真有一种情况可以将类定义为 static 类型的,那就是内部类.
+- 其实这个问题非常明白,用 abstract 修饰的类就是抽象类,并不是说抽象类中必须有抽象方法,即使一个类中的方法全部实现过,也可以用 abstract 修饰为抽象类,所以抽象类不一定都有抽象方法.
+- 延伸：因为真有一种情况可以将类定义为 static 类型的,那就是内部类.
 
 ## 12. 普通类和抽象类有哪些区别？
 
-    - 1、普通类可以去实例化调用；抽象类不能被实例化,因为它是存在于一种概念而不非具体.
-    - 2、普通类和抽象类都可以被继承,但是抽象类被继承后子类必须重写继承的方法,除非自类也是抽象类.
-    - 包含抽象方法的类称为抽象类,但并不意味着抽象类中只能有抽象方法,它和普通类一样,同样可以拥有成员变量和普通的成员方法.注意,抽象类和普通类的主要有三点区别：
-      - 1)抽象方法必须为 public 或者 protected(因为如果为 private,则不能被子类继承,子类便无法实现该方法),缺省情况下默认为 public.
-      - 2)抽象类不能用来创建对象；
-      - 3)如果一个类继承于一个抽象类,则子类必须实现父类的抽象方法.如果子类没有实现父类的抽象方法,则必须将子类也定义为为 abstract 类.
-    - 在其他方面,抽象类和普通的类并没有区别
+- 1、普通类可以去实例化调用；抽象类不能被实例化,因为它是存在于一种概念而不非具体.
+- 2、普通类和抽象类都可以被继承,但是抽象类被继承后子类必须重写继承的方法,除非自类也是抽象类.
+- 包含抽象方法的类称为抽象类,但并不意味着抽象类中只能有抽象方法,它和普通类一样,同样可以拥有成员变量和普通的成员方法.注意,抽象类和普通类的主要有三点区别：
+  - 1)抽象方法必须为 public 或者 protected(因为如果为 private,则不能被子类继承,子类便无法实现该方法),缺省情况下默认为 public.
+  - 2)抽象类不能用来创建对象；
+  - 3)如果一个类继承于一个抽象类,则子类必须实现父类的抽象方法.如果子类没有实现父类的抽象方法,则必须将子类也定义为为 abstract 类.
+- 在其他方面,抽象类和普通的类并没有区别
 
 ## 13. 抽象类能使用 final 修饰吗？
 
-    - 不能,抽象方法是为了继承之后重写方法的,而用 final 修饰的类,无法继承
+- 不能,抽象方法是为了继承之后重写方法的,而用 final 修饰的类,无法继承
 
 ## 14. 接口和抽象类有什么区别？
 
-    - > [链接](https://www.jianshu.com/p/038f0b356e9a)
-    
-    - 抽象类(abstract class):一个抽象类不能实例化,依然可以在类的实体(直白点就是能在｛｝里面)定义成员变量,成员方法,构造方法等.一个类中含有抽象方法(被 abstract 修饰),那么这个类必须被声明为抽象类(被 abstract 修饰).
-    
-    - 接口(interface):接口在 java 中是一个抽象类型,是抽象方法的集合.一个类通过继承接口的方式,从而继承接口的抽象方法.
+[链接](https://www.jianshu.com/p/038f0b356e9a)
+
+- 抽象类(abstract class):一个抽象类不能实例化,依然可以在类的实体(直白点就是能在｛｝里面)定义成员变量,成员方法,构造方法等.一个类中含有抽象方法(被 abstract 修饰),那么这个类必须被声明为抽象类(被 abstract 修饰).
+
+- 接口(interface):接口在 java 中是一个抽象类型,是抽象方法的集合.一个类通过继承接口的方式,从而继承接口的抽象方法.
 
 ## 15. java 中 IO 流分为几种？
 
-    - 两种：输入流与输出流
+- 两种：输入流与输出流
 
 ## 16. BIO、NIO、AIO 有什么区别？
 
-    - IO 的方式通常分为几种，同步阻塞的 BIO、同步非阻塞的 NIO、异步非阻塞的 AIO。
-    
-    - > [链接](https://blog.csdn.net/skiof007/article/details/52873421)
+[链接](https://blog.csdn.net/skiof007/article/details/52873421)
+
+- IO 的方式通常分为几种，同步阻塞的 BIO、同步非阻塞的 NIO、异步非阻塞的 AIO。
 
 ## 17. Files 的常用方法都有哪些？
 
-    | 方法声明                 | 功能描述                                                     |
-    | ------------------------ | ------------------------------------------------------------ |
-    | boolean exists()         | 判断 File 对象对应的文件或者目录是否存在若存在则返回 true，否则返回 false |
-    | boolean delete()         | 删除 File 对象对应的文件或者目录若成功则返回 true，否则返回 false |
-    | boolean createNewFile()  | 当 File 对象对应的文件不存在时，该方法将新建一个此 File 对象所指定的新文件若创建成功则返回 true，否则返回 false |
-    | String getName()         | 返回 File 对象表示的文件或文件夹的名称                       |
-    | String getPath()         | 返回 File 对象对应的路径                                     |
-    | String getAbsolutePath() | 返回 File 对象对应的绝对路径（在 UNIX/Linux 等系统上，如果路径是以正斜线 / 开始的，则这个路径是绝对路径；在 Windows 等系统上，如果路径是从盘符开始的，则这个路径是绝对路径） |
-    | String getParent()       | 返回 File 对象对应目录的父目录，（即返回的目录不包含最后一级子目录） |
-    | boolean canRead()        | 判断 File 对象对应的文件或者目录是否可读若可读则返回 true，反之返回 false |
-    | boolean canWrite()       | 判断 File 对象对应的文件或者目录是否可写。若可写则返回 true，反之返回 false |
-    | boolean isFile()         | 判断 File 对象对应的是否是文件（不是目录）若是文件则返回 true，反之返回 false |
-    | boolean isDirectory()    | 判断 File 对象对应的是否是目录（不是文件）若是目录则返回 true，反之返回 false |
-    | boolean isAbsolute()     | 判断 File 对象对应的文件或者目录是否是绝对路径               |
-    | long lastModified()      | 返回 1970 年 1 月 1 日 0 时 0 分 0 秒到文件最好修改时间的毫秒值 |
-    | long length()            | 返回文件内容长度                                             |
-    | String [ ]list()         | 返回指定目录的全部内容，只列出名称                           |
-    | File[ ] listFiles()      | 返回一个包含了 File 对象所有子文件和子目录的 File 数组       |
+| 方法声明                 | 功能描述                                                                                                                                                                     |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| boolean exists()         | 判断 File 对象对应的文件或者目录是否存在若存在则返回 true，否则返回 false                                                                                                    |
+| boolean delete()         | 删除 File 对象对应的文件或者目录若成功则返回 true，否则返回 false                                                                                                            |
+| boolean createNewFile()  | 当 File 对象对应的文件不存在时，该方法将新建一个此 File 对象所指定的新文件若创建成功则返回 true，否则返回 false                                                              |
+| String getName()         | 返回 File 对象表示的文件或文件夹的名称                                                                                                                                       |
+| String getPath()         | 返回 File 对象对应的路径                                                                                                                                                     |
+| String getAbsolutePath() | 返回 File 对象对应的绝对路径（在 UNIX/Linux 等系统上，如果路径是以正斜线 / 开始的，则这个路径是绝对路径；在 Windows 等系统上，如果路径是从盘符开始的，则这个路径是绝对路径） |
+| String getParent()       | 返回 File 对象对应目录的父目录，（即返回的目录不包含最后一级子目录）                                                                                                         |
+| boolean canRead()        | 判断 File 对象对应的文件或者目录是否可读若可读则返回 true，反之返回 false                                                                                                    |
+| boolean canWrite()       | 判断 File 对象对应的文件或者目录是否可写。若可写则返回 true，反之返回 false                                                                                                  |
+| boolean isFile()         | 判断 File 对象对应的是否是文件（不是目录）若是文件则返回 true，反之返回 false                                                                                                |
+| boolean isDirectory()    | 判断 File 对象对应的是否是目录（不是文件）若是目录则返回 true，反之返回 false                                                                                                |
+| boolean isAbsolute()     | 判断 File 对象对应的文件或者目录是否是绝对路径                                                                                                                               |
+| long lastModified()      | 返回 1970 年 1 月 1 日 0 时 0 分 0 秒到文件最好修改时间的毫秒值                                                                                                              |
+| long length()            | 返回文件内容长度                                                                                                                                                             |
+| String [ ]list()         | 返回指定目录的全部内容，只列出名称                                                                                                                                           |
+| File[ ] listFiles()      | 返回一个包含了 File 对象所有子文件和子目录的 File 数组                                                                                                                       |
 
 ## 18. java 如何解决的多重继承
 
-    - [链接](https://www.cnblogs.com/chenssy/p/3389027.html) - 1. 接口 - 2. 内部类
+- [链接](https://www.cnblogs.com/chenssy/p/3389027.html) - 1. 接口 - 2. 内部类
